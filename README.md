@@ -22,6 +22,10 @@ The remote URL is not working in any case.
 - step into the `trimLeft()` method of the test
 - plain `.js` file is shown in debugger not the mapped file.
 
+You can adjust if the sourceRoot is set using a boolean variable in the `adjust-source-maps.ts`.
+Behaviour is the same if you use the source route or not. 
+Source maps are not picked up by the debugger.
+
 ### Goal
 
 The `sourceRoot` should work like expected also with a remote URL in VSC and Webstorm. 
