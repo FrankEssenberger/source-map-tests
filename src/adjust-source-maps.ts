@@ -18,7 +18,7 @@ async function adjustSourceMaps(useSourceRoot=true){
 
             const newSourceRoot = useSourceRoot ? join(pathToSources,fileFolder) : "";
             const sourceFileName = fileName.replace(new RegExp("\.js\.map|\.d\.ts\.map"),".ts")
-            const newSources = useSourceRoot ? join(fileFolder,sourceFileName) : join(pathToSources,fileFolder,sourceFileName)
+            const newSources = useSourceRoot ? sourceFileName : join(pathToSources,fileFolder,sourceFileName)
             const newSourceMap = {...fileContent,sourceRoot:newSourceRoot,sources:[newSources]}
 
             await writeFile(filePath, JSON.stringify(newSourceMap, null, 2), {encoding: "utf-8"})
