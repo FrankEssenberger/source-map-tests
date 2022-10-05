@@ -1,0 +1,15 @@
+{   
+    "configurations": [{
+        "name": "exp test typescript debugger",
+        "type": "node",
+        "request": "launch",
+        "runtimeArgs": [
+            "-r",
+            "ts-node/register"
+        ],
+        "args": [
+            "${workspaceFolder}/src/debug-test.ts"
+        ]
+    }
+    ]
+}
