@@ -21,7 +21,7 @@ async function adjustSourceMaps(useSourceRoot=true){
             const newSources = useSourceRoot ? sourceFileName : join(pathToSources,fileFolder,sourceFileName)
             const newSourceMap = {...fileContent,sourceRoot:newSourceRoot,sources:[newSources]}
 
-            await writeFile(filePath, JSON.stringify(newSourceMap, null, 2), {encoding: "utf-8"})
+            await writeFile(filePath, JSON.stringify(newSourceMap), {encoding: "utf-8"})
         }catch(e:any){
             console.log(`Error in adjusting file: ${file}: ${e.message}`)
         }
@@ -29,4 +29,4 @@ async function adjustSourceMaps(useSourceRoot=true){
     console.log(`${files.length} source maps have been adjusted.`)
 }
 
-adjustSourceMaps()
+adjustSourceMaps(false)
