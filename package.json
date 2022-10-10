@@ -1,19 +1,21 @@
 {
   "name": "source-map-test",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "postinstall": "npm run adjust-source-maps",
     "adjust-source-maps": "ts-node src/adjust-source-maps.ts",
-    "debug-test-ts": "ts-node src/debug-test.ts"
+    "debug-test-ts": "ts-node src/debug-test.ts",
+    "source-map-test" : "ts-node src/source-map-api-test.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FrankEssenberger/source-map-tests.git"
   },
   "author": "",
-  "license": "ISC",
+  
   "bugs": {
     "url": "https://github.com/FrankEssenberger/source-map-tests/issues"
   },

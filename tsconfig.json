@@ -1,12 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2019",
-    "module": "commonjs",
     "rootDir": "./src",
     "outDir": "./dist",
     "tsBuildInfoFile": "./dist/.tsbuildinfo",
-    "composite": true
+    "composite": true,
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "inlineSources": false,
+    "inlineSourceMap" : false,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true 
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/debug-test.mjs"],
   "exclude": ["dist/**/*", "**/*.spec.ts", "node_modules/**/*","util-src/**/*"]
 }

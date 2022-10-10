@@ -3,12 +3,13 @@
         "name": "exp test typescript debugger",
         "type": "node",
         "request": "launch",
-        "runtimeArgs": [
-            "-r",
-            "ts-node/register"
+        "resolveSourceMapLocations":[
+            "${workspaceFolder}/**",
+            "**/node_modules/**"
         ],
+        "sourceMaps": true,
         "args": [
-            "${workspaceFolder}/src/debug-test.ts"
+            "${workspaceFolder}/src/debug-test.mjs"
         ]
     }
     ]
