@@ -3,7 +3,7 @@ import {resolve,join,parse} from "path";
 import {promises} from 'fs'
 
 const {readFile,writeFile} = promises
- const remotePathToSources ='https://raw.githubusercontent.com/SAP/cloud-sdk-js/main/packages/util/src/'
+ const remotePathToSources ='http://raw.githubusercontent.com/SAP/cloud-sdk-js/main/packages/util/src/'
 const pathToDist = resolve(__dirname,'../','node_modules','@sap-cloud-sdk','util','dist')
 
 async function adjustSourceMaps(useSourceRoot=true){

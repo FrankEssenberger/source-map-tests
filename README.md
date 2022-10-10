@@ -13,7 +13,7 @@ However, this is not working as expected. Here a minimal example using local sou
 ### Steps to reproduce
 
 - run `npm i`
-- run `node src/debug-test.mjs` in debug mode (see launch.json or run file in .idea, debug console)
+- run `node src/debug-test.mjs` in debug mode (see launch.json)
 - step into the `trimLeft()` method of the test
 - plain `.js` file is shown in debugger not the mapped file.
 
@@ -24,9 +24,12 @@ Could not load source '/Users/XXX/WebstormProjects/source-map-test/node_modules/
 ```
 
 which indicated that the sourceRoot property is not correctly considered. According to [spec](https://www.typescriptlang.org/tsconfig#sourceRoot) it is an absolute path.
-Also in the [sourceroot spec](https://sourcemaps.info/spec.html) nothing is mentioned about a default path based on the current working director
+Also in the [sourceroot spec](https://sourcemaps.info/spec.html) nothing is mentioned about a default path based on the current working directory.
+
+I had a look at the default lib which everybody uses I guess `source-map` but there it also did not load the file see `source-map-test.mjs`.
+Also with the chrome debug tolls the same could not load source error appears with the paths beeing added up.
 
 
 ### Goal
 
-The `sourceRoot` should work like expected also with a remote URL in VSC and Webstorm. 
+The `sourceRoot` should work like expected also with a remote URL in VSC. 
