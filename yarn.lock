@@ -654,6 +654,11 @@ one-time@^1.0.0:
   dependencies:
     fn.name "1.x.x"
 
+prettier@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
+
 promise.allsettled@^1.0.4:
   version "1.0.5"
   resolved "https://registry.npmjs.org/promise.allsettled/-/promise.allsettled-1.0.5.tgz#2443f3d4b2aa8dfa560f6ac2aa6c4ea999d75f53"
@@ -719,7 +724,7 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-source-map@0.7.4:
+source-map@^0.7.4:
   version "0.7.4"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==

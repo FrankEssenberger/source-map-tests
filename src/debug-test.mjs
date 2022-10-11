@@ -1,5 +1,4 @@
-import {trimLeft} from "@sap-cloud-sdk/util";
+import { trimLeft } from "@sap-cloud-sdk/util";
 
-
-const trimmed = trimLeft('   test value')
-console.log(`debug test typescript done: ${trimmed}.`)
+const trimmed = trimLeft("   test value");
+console.log(`debug test typescript done: ${trimmed}.`);
